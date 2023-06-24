@@ -1,0 +1,679 @@
+/* ################## html element styling ########### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 16px --- 100 % */
+    /* 16px --- (100 / 16) * 10  */
+}
+
+.header {
+    height: 95vh;
+    /* border:2px solid red;  */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Img/header-image.jpg ');
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h1 {
+
+    color: white;
+    font-weight: 400px;
+    font-size: 0.5em;
+}
+
+.navbar {
+    /* border: 2px solid white; */
+    padding: 1rem;
+}
+
+/* .header .logo,
+.header .navbar a{   ----> this style have specificity
+  color:white;
+} */
+.navbar .logo {
+    font-size: 3.5rem;
+    float: left;
+}
+
+.navbar .nav-items {
+    float: right;
+    margin-top: 1rem;
+}
+
+.navbar::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.navbar .nav-item {
+    display: inline-block;
+    padding: 1rem;
+
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+p,
+li {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+/*-------------------------  utility classes  -------------------------*/
+/* utility classes at one time we can use */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bg-dark {
+    background-color: #263238;
+}
+
+.lg-heading {
+    font-size: 3.5rem;
+}
+
+.md-heading {
+    font-size: 2.2rem;
+}
+
+.text-red {
+    color: #e63946;
+}
+
+.text-light {
+    color: #f4f4f4;
+}
+
+.text-black {
+    color: #333333;
+}
+
+.text-grey {
+    color: #555555;
+}
+
+.navbar a:link,
+.navbar a:visited {
+    color: #f4f4f4;
+}
+
+.navbar a {
+    padding-bottom: 0.3rem;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #ffff;
+}
+
+/* ######################## .header-contant style $$$$$$$$$$$$$$$$$ */
+.header-contant {
+    position: absolute;
+    /* border:  2px solid rgb(255, 255, 255); */
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1));
+}
+
+.header-contant h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header-contant p {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+.btn-primary {
+    border-radius: 100px;
+    background-color: #f4f4f4;
+
+}
+
+.btn-secondary {
+
+    border-radius: 1.5em;
+    border: 2px solid red;
+    /* color: red; */
+    background-color: #f4f4f4;
+}
+
+.btn-primary:hover {
+    background-color: #ddd;
+}
+
+.btn-secondary:hover {
+    background-color: #e79fa5;
+}
+
+/* ##################################### show-case section style ####################### */
+.showcase {
+    background: #ddd;
+    padding: 10rem 0;
+}
+
+.row {
+    height: 350px;
+    /* border: 2px solid red; */
+    background: #ffff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.315);
+}
+
+.row1 {
+    margin-bottom: 10rem;
+}
+
+.row1 .img-box,
+.row2 .text-box {
+    float: left;
+    width: 50%;
+}
+
+.row2 .img-box,
+.row1 .text-box {
+    float: right;
+    width: 50%;
+}
+
+.row .img-box {
+    /* border: 2px solid rgb(17, 255, 0); */
+    height: 100%;
+}
+
+.row .text-box {
+    /* border:2px solid blue; */
+    padding: 30px;
+}
+
+.row .img-box img {
+    display: inline-block;
+    object-fit: cover;
+    /* for making asexpect ration balace we are using object-fit property */
+    width: 100%;
+    height: 100%;
+}
+
+/* ################################# bottom sectoin style ########################### */
+/* .box-box-1{
+    margin-top: 5%;
+    display: inline-block;
+  border:2px solid red;
+  text-align: center;
+  width: 30%;
+  height: 50%;
+  margin-bottom: 20%;
+  padding-left: 2%;
+  background-color: #333333;
+}
+.box-box-2{
+    margin-top: 5%;
+    padding-left: 2%;
+    display: inline-block;
+    border:2px solid green;
+  width: 30%;
+  height: 50%;
+  margin-bottom: 20%;
+  background-color: rgb(168, 84, 84);
+}
+.box-box-3{
+    margin-top: 5%;
+    padding-left: 2%;
+    display: inline-block;
+    width: 30%;  
+    border:3px solid blue;
+    height: 50%;     
+    margin-bottom: 20%;
+    background-color: #333333;
+} */
+.features {
+    padding: 10rem 0;
+}
+
+.box-wrapper {
+    /* border:2px solid red; */
+    box-shadow: 5px 5px 10px 0px #262626;
+}
+
+.box {
+    width: 33.33%;
+    float: left;
+    /* border:2px solid green; */
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.box-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box-1,
+.box-3 {
+    background-color: #262626;
+    color: white;
+}
+
+.box-2 {
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    color: white;
+}
+
+/* ******************************************************************* footer ------------------------------- */
+.footer {
+    background: #263238;
+    color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .social-medial-links .fab {
+    margin: 2rem;
+    /* border: 2px solid red; */
+}
+.about-footer{
+    margin-top: 15rem;
+}
+/* *************************** ABOUT PAGE STYLING ************************** */
+.about {
+    padding: 5rem 0;
+}
+
+/* .about-heading{
+  border-bottom: 6px solid #e63946;
+} */
+.about-heading::after {
+    content: ' ';
+    /* color:#e63946; */
+    display: block;
+    border: 3px solid #e63946;
+    width: 100%;
+}
+
+/* ################################### about wrapper styling ####################### */
+.about-wrapper {
+    /* border: 2px solid red; */
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.about-wrapper .left {
+    float: left;
+    width: 50%;
+}
+
+.about-wrapper .right {
+    float: right;
+    width: 50%;
+}
+
+.about-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.about-wrapper li::before {
+    content: '\2713';
+    color: #e63946;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+/* ############################# counts styling ################################ */
+.counts {
+    margin-top: 3rem;
+    /* border:6px solid gray; */
+}
+
+.count-item {
+    /* border: 2px solid green; */
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.counts::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.count-item span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e63946
+}
+
+.count-item p {
+    font-weight: 700;
+    color: #555555;
+    font-size: 1.8rem;
+}
+
+/* ################################## bottom part $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* .cta-banner{
+    background-color: #ee4758;
+    margin-top: 2rem;
+    border: 2px solid blue;
+}
+.cta-banner-left .cta-line{
+    float:left;
+    margin: 2rem;
+    font-size: 1rem;
+    border:2px solid violet;
+}   
+.cta-banner-right .btn-cta{
+    float:right; */
+/* border-color: #e63946; */
+/* background-color: #e63946;
+    font-size: 3rem;
+    color: #f4f4f4;
+    margin: 2rem;
+    border:2px solid pink;
+} */
+.cta-banner {
+    background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    color: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px #6869db;
+}
+
+.cta-line {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.btn-cta {
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 4px solid white;
+    padding: 0.3rem 2.5rem;
+    letter-spacing: 0.5rem;
+    color: #f4f4f4;
+}
+
+.cta-banner-left {
+    width: 60%;
+    float: left;
+}
+
+.cta-banner-right {
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+
+.cta-banner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* #################################################### contact-page styling %%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.contact-form {
+    padding: 5rem 0;
+    background: #f7f7f7;
+    /* font-size:2rem; */
+}
+
+.form-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.form-wrapper .company-address {
+    height: 760px;
+    /* border:4px solid blue; */
+    background: #ffff;
+    width: 49%;
+    float: left;
+    padding: 1rem;
+}
+
+.form-wrapper .company-address i {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.form-wrapper .company-address h2 {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.form-wrapper .address-group {
+    margin-bottom: 3rem;
+}
+
+.form-wrapper .company-address img {
+    max-width: 90%;
+    min-height: 40rem;
+    object-fit: cover;
+    object-position: right;
+}
+
+/* ########################################## form styling ################################# */
+.form-wrapper .form {
+    height: 760px;
+    background: #ffff;
+    font-size: 1.6rem;
+    /* border: 4px dotted black; */
+    width: 49%;
+    float: right;
+    padding: 1rem;
+}
+
+.form h1:after {
+    content: '';
+    display: block;
+    border: 3px solid #ee4758;
+    width: 100%;
+}
+
+.form-wrapper label {
+    display: block;
+}
+
+.form-wrapper .form input {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form-wrapper .form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-wrapper .form label::after {
+    content: "* ";
+    color: #ee4758;
+}
+
+.form .form-group textarea {
+    width: 100%;
+    height: 300px;
+    padding: 1rem;
+}
+
+.form-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 3em;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    background-color: #ee4758;
+    color: #ffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ########################################### Media-queries ############################# */
+@media (max-width:500px) {
+    html {
+        font-size: 50%;
+    }
+
+    .navbar .nav-items,
+    .navbar .logo {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .header-contant .main-heading{
+        display: none;
+    }
+
+    .row {
+        height: auto;
+        width: 100%;
+    }
+
+    .row .img-box,
+    .row .text-box {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .box {
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(102,102,102,0.521);
+    }
+    .box-wrapper{
+        box-shadow: none;
+    }
+    .cta-banner-left,.cta-banner-right{
+        float:none;
+        width: 100%;
+        text-align: centers;
+    }
+    .form-wrapper .company-address{
+        float:none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .form-wrapper .form{
+        float:none;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width:501px) and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .navbar .nav-items,
+    .navbar .logo {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        height: auto;
+        width: 100%;
+    }
+
+    .row .img-box,
+    .row .text-box {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .box {
+        float: none;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(102,102,102,0.521);
+    }
+    .box-wrapper{
+        box-shadow: none;
+    }
+    .cta-banner-left,.cta-banner-right{
+        float:none;
+        width: 100%;
+        text-align: centers;
+    }
+    .form-wrapper .company-address{
+        float:none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .form-wrapper .form{
+        float:none;
+        width: 100%;
+        height: auto;
+    }
+}
+@media (min-width:769px) and (max-width:1200px)  {
+    html{
+        font-size: 56.25%;
+    }
+    .row .text-box h2{
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+}
+@media (orientation:landscape) and (max-height  :500px){
+ .header{
+    height: 90vmax;
+
+ }    
+}
